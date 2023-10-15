@@ -6,5 +6,5 @@ public class Game {
     }
     private Player currentPlayer;
 
-    public void play(){}
+    public void play(Board b){}
 }

@@ -20,11 +20,11 @@ public class Main {
         }
         else{
             if(temp.equals("yes")){
-               playerX_h = new HumanPlayer();
+               playerX_h = new HumanPlayer('x');
                playerX_b = null;
                x = playerX_h;
             } else {
-                playerX_b = new BotPlayer();
+                playerX_b = new BotPlayer('x');
                 playerX_h = null;
                 x = playerX_b;
             }
@@ -40,11 +40,11 @@ public class Main {
         }
         else{
             if(temp.equals("yes")){
-                playerO_h = new HumanPlayer();
+                playerO_h = new HumanPlayer('o');
                 playerO_b = null;
                 o = playerO_h;
             } else {
-                playerO_b = new BotPlayer();
+                playerO_b = new BotPlayer('o');
                 playerO_h = null;
                 o = playerO_b;
             }
