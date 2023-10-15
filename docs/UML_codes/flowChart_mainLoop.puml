@@ -1,0 +1,24 @@
+@startuml
+    | TicTacToe |
+        start
+        repeat
+        if (Player x Human?) then (yes)
+            :NewHumanPlayer;
+        else (no)
+            :New ComputerPlayer;
+        endif
+        if (Player 0 human?) then (yes)
+            :New HumanPlayer;
+        else (no)
+            :New ComputerPlayer;
+        endif
+        :New game;
+    | Game |
+        :New board;
+        :Set current player;
+        :Play game;
+    | TicTacToe |
+       repeat while (Play again?) is (yes)
+       -> no;
+       stop
+@enduml

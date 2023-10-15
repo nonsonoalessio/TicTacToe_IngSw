@@ -1,0 +1,18 @@
+@startuml
+actor Player
+
+usecase "Start new game" as UC1
+usecase "Play Game" as UC2
+usecase "Make move" as UC3
+usecase "Generate move" as UC4
+usecase "Play again" as UC5
+
+Player --> UC1
+Player --> UC2
+Player --> UC5
+Player --> UC3
+
+UC2 --> UC3: <<includes>>
+UC3 <-- UC4: <<extends>>
+UC5 --> UC1: <<includes>>
+@endmul

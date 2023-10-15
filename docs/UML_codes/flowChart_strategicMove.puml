@@ -1,0 +1,20 @@
+@startuml
+start
+:Check for a winning move;
+if (Winning move available?) then (yes)
+        :Make the winning move;
+    else (no)
+        :Check for opponent's winning move;
+        if (Blocking Move Available?) then (yes)
+            :Make the blocking move;
+        else (no)
+        :Find a strategic move;
+        if (Strategic move available?) then (yes)
+            :Make strategic move;
+        else (no)
+            :Make a random Move;
+        endif
+    endif
+endif
+stop
+@enduml
