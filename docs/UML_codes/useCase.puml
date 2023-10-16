@@ -15,4 +15,5 @@ Player --> UC3
 UC2 --> UC3: <<includes>>
 UC3 <-- UC4: <<extends>>
 UC5 --> UC1: <<includes>>
-@endmul
+
+@enduml
