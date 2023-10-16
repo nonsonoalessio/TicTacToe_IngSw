@@ -1,5 +1,5 @@
 @startuml
-    skinparam classAttributeIconSize 0
+skinparam classAttributeIconSize 0
     abstract class Player{
         # mark: char
 
@@ -8,7 +8,7 @@
 
     class Board{
         - cells: char[3][3]
-
+        - cellsetter:(row:int , ):void
         + isValidMove(move: Move): boolean
         + makeMove(move: Move, mark: char): boolean
         + isFull(): boolean
@@ -32,9 +32,12 @@
     + makeMove(board:Board): Move
     }
 
-    class CpuPlayer{
-
+    class BotPlayer{
+    - winningMoveAvailable (b:Board , mark:char ): boolean
     + makeMove(board:Board): Move
+    - blockingMoveAvailable(b:Board, mark:char): boolean
+    - strategicMoveAvailable(b:Board , mark:char): boolean
+    - randomMove (b:Board , mark:char): Move
     }
 
     HumanPlayer --|> Player
