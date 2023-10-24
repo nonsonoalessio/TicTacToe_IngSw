@@ -21,6 +21,7 @@ public class BotPlayer extends Player {
 
     private boolean winningMoveAvailable(Board b, char mark){
         // check orizzontale
+        for(char[] rows : )
         // check verticale
         // check diagonale
     }
